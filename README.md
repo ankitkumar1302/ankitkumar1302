@@ -1,20 +1,35 @@
-# 👋 Hello! I'm Ankit
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=7B68EE&height=120&section=header"/>
 
-## 👨‍💻 About Me
+## <picture><img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/about_me.gif?raw=true" width = 50px></picture> About me
 
-- 👨‍🎓 I'm an 18 year old self-taught developer
-- 🎓 Currently pursuing a diploma in Computer Science
-- 📱 Native Android developer 
+<picture> <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width = 250px></picture>
+
+<br><br>
+- :technologist: Creating Android apps and APIs using Kotlin.
+- :mechanical_arm: I lead a healthy lifestyle.
+- :computer: Watch anime in free time
+<br>
 
 # Skills
+#### Languages:
+```json
+["Koltin", "Java"]
+```
 
-- Kotlin <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/kotlin/kotlin.png" alt="Kotlin" width="24" height="24">
+#### Developmet Skills:
+```json
+["Jetpack compose", "Ktor", "Vim", "Github", "Linux"]
+```
 
-- Jetpack Compose <img src="https://developer.android.com/images/brand/Android_Robot_200.png" alt="Jetpack Compose" width="24" height="24">
+#### Databases:
+```json
+["Firebase", "MySQL"]
+```
 
-- Firebase <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" alt="Firebase" width="24" height="24">
-
-- MySQL <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" alt="MySQL" width="24" height="24">
+#### Other tools:
+```json
+["Figma", "Notion", "Postman"]
+```
 
 ## 🌐 Socials
 
