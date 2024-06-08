@@ -3,7 +3,7 @@
 ## <picture><img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/about_me.gif?raw=true" width = 50px></picture> About me
 
 <picture> <img align="right" src="https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/Right_Side.gif?raw=true" width = 250px></picture>
-
+[![wakatime](https://wakatime.com/badge/user/d77f22c3-dde6-4436-80c7-6ee0f89522ea.svg)](https://wakatime.com/@d77f22c3-dde6-4436-80c7-6ee0f89522ea)
 <br><br>
 - :technologist: Creating Android apps and APIs using Kotlin.
 - :mechanical_arm: I lead a healthy lifestyle.
