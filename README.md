@@ -54,11 +54,9 @@
 </div>
 
 ## 🌐 Socials
-
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)]((https://www.instagram.com/onedreamxy/)) 
+ 
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/onedreamxy/) 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/ankit-kumar-48aa30235)
-
-
 
 <div align="left">
   <img src="https://profile-counter.glitch.me/ankitkumar1302/count.svg?"  />
