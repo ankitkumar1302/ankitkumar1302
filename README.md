@@ -4,7 +4,7 @@
 <br><br>
   - 🔭 I'm currently working on my own projects, in particular the Study Assistant <br>
  - 📚 I'm currently learning Kotlin Multiplatform technologies. 
- - ⚡ In my free time, I like to watch movies, anime and play on the Xbox.<br>
+ - ⚡ In my free time, I like to watch anime.<br>
 <be>
 
 
