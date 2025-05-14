@@ -4,17 +4,21 @@ A modern, polished analytics dashboard UI built with Jetpack Compose, featuring 
 
 ## App Screenshots
 
+<div align="center">
+
 ### Main Dashboard
-![Main Dashboard](app/src/main/res/drawable/main.png)
+<img src="docs/images/main.png" width="300" alt="Main Dashboard">
 
 ### Audience Demographics
-![Audience Demographics](app/src/main/res/drawable/audience_demographic.png)
+<img src="docs/images/audience_demographic.png" width="300" alt="Audience Demographics">
 
 ### Engagement Analytics
-![Engagement Analytics](app/src/main/res/drawable/engagement_rate.png)
+<img src="docs/images/engagement_rate.png" width="300" alt="Engagement Analytics">
 
 ### Settings Screen
-![Settings Screen](app/src/main/res/drawable/settings.png)
+<img src="docs/images/settings.png" width="300" alt="Settings Screen">
+
+</div>
 
 ## Features
 
