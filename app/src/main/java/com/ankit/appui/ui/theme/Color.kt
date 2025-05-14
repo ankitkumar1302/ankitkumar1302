@@ -11,18 +11,21 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 // Custom Colors for Twitch Insights UI
-val AlmostBlack = Color(0xFF121212) // Main background
-val DarkGray = Color(0xFF1E1E1E)    // Card background
-val OffWhite = Color(0xFFE0E0E0)    // Primary text color
-val LightGray = Color(0xFFB0B0B0)   // Secondary text color
+val AlmostBlack = Color(0xFF0C0C0C) // Darker background for better contrast
+val DarkGray = Color(0xFF181818)    // Darker card background for better contrast
+val DarkCardColor = Color(0xFF202020) // Darker card backgrounds
+val LightGray = Color(0xFFCCCCCC)    // Lighter for better contrast
+val OffWhite = Color(0xFFF5F5F5)    // Whiter text color for better contrast
 
-val TwitchPurple = Color(0xFF6441A5) // A representative purple
-val TwitchBlue = Color(0xFF2683DD)   // A representative blue for gradient
-val TwitchPink = Color(0xFFE91E63)   // A representative pink for gradient
-val PositiveGreen = Color(0xFF4CAF50) // For positive change indicator
+// Enhanced colors for better accessibility (WCAG AA compliant)
+val TwitchPurple = Color(0xFF8A3FFC) // Standard purple accent (stronger contrast)
+val TwitchBlue = Color(0xFF42BFFF)   // Brightened blue for better contrast
+val TwitchPink = Color(0xFFFF69B4)   // Brightened pink for better contrast
+val PositiveGreen = Color(0xFF42E080) // For positive change indicator
+val NegativeRed = Color(0xFFFF5757) // Brightened for negative trends
 
-val LightPurple = Color(0xFF9D7DE8) // For Insight Report icon gradient
-val DarkPurple = Color(0xFF6441A5)   // For Insight Report icon gradient
+val LightPurple = Color(0xFFAC6FFF) // Lightened for better contrast
+val DarkPurple = Color(0xFF6929C4)   // Darkened for better contrast
 
 val PurpleTransparent = TwitchPurple.copy(alpha = 0.5f)
 val TransparentPurple = TwitchPurple.copy(alpha = 0.0f)

@@ -54,20 +54,19 @@ dependencies {
 
     // Compose Material 3
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material:material") // Material 2 for additional components
+    implementation("androidx.compose.foundation:foundation") // Foundation components
+    implementation("androidx.compose.foundation:foundation-layout")
 
     // Compose Navigation
     implementation("androidx.navigation:navigation-compose:2.7.7") // Use the latest stable version
 
     // Material Icons
     implementation("androidx.compose.material:material-icons-core")
-    implementation(libs.androidx.material.icons.extended) // For more icons like ArrowDropUp
+    implementation("androidx.compose.material:material-icons-extended") // For more icons like ArrowDropUp
 
     // Accompanist - System UI Controller
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
-
-    // Blur effects
-    implementation("com.github.skydoves:landscapist-glide:2.2.12")
-    implementation("com.github.skydoves:landscapist-blur:2.2.12")
 
     // Animations
     implementation("androidx.compose.animation:animation")

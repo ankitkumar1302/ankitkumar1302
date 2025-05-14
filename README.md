@@ -2,7 +2,7 @@
 
 A modern, polished analytics dashboard UI built with Jetpack Compose, featuring a dark theme and beautiful data visualizations.
 
-![Twitch Insights Analytics UI](app/src/main/res/drawable/screenshot.png)
+![Twitch Insights Analytics UI](app/src/main/res/drawable/main.png)
 
 ## Features
 

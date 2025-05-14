@@ -4,29 +4,26 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.animation.AnimatedContentTransitionScope
-import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.animation.core.tween
+import androidx.compose.animation.*
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
-import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.ankit.appui.ui.insights.DetailScreen
 import com.ankit.appui.ui.insights.InsightsScreen
 import com.ankit.appui.ui.insights.ProfileScreen
 import com.ankit.appui.ui.insights.SettingsScreen
+import com.ankit.appui.ui.theme.AlmostBlack
 import com.ankit.appui.ui.theme.AppUITheme
-import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
-import com.google.accompanist.navigation.material.MaterialSharedAxis
-import com.google.accompanist.navigation.material.composable as materialComposable
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 // Define app navigation routes
@@ -47,7 +44,6 @@ sealed class Screen(val route: String) {
 }
 
 class MainActivity : ComponentActivity() {
-    @OptIn(ExperimentalMaterialNavigationApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
@@ -62,86 +58,63 @@ class MainActivity : ComponentActivity() {
             val systemUiController = rememberSystemUiController()
             
             AppUITheme {
-                // Set status bar and navigation bar to be transparent
-                systemUiController.setSystemBarsColor(
-                    color = androidx.compose.ui.graphics.Color.Transparent,
-                    darkIcons = false
-                )
+                // Set status bar transparent and navigation bar to match bottom bar color
+                SideEffect {
+                    systemUiController.setStatusBarColor(
+                        color = androidx.compose.ui.graphics.Color.Transparent,
+                        darkIcons = false
+                    )
+                    
+                    // Set navigation bar to match bottom bar
+                    systemUiController.setNavigationBarColor(
+                        color = AlmostBlack,
+                        darkIcons = false
+                    )
+                }
+                
+                // Define standard animation specs for consistency
+                val enterTransitionSpec = tween<Float>(200, easing = FastOutSlowInEasing)
+                val exitTransitionSpec = tween<Float>(200, easing = FastOutSlowInEasing)
                 
                 NavHost(
                     navController = navController,
                     startDestination = Screen.Insights.route,
                     modifier = Modifier.fillMaxSize()
                 ) {
+                    // Insights screen - main dashboard
                     composable(
                         route = Screen.Insights.route,
-                        enterTransition = {
-                            slideIntoContainer(
-                                towards = AnimatedContentTransitionScope.SlideDirection.Right,
-                                animationSpec = tween(300)
-                            )
-                        },
-                        exitTransition = {
-                            slideOutOfContainer(
-                                towards = AnimatedContentTransitionScope.SlideDirection.Left,
-                                animationSpec = tween(300)
-                            )
-                        }
+                        enterTransition = { fadeIn(animationSpec = enterTransitionSpec) },
+                        exitTransition = { fadeOut(animationSpec = exitTransitionSpec) }
                     ) {
                         InsightsScreen(navController)
                     }
                     
-                    materialComposable(
+                    // Detail screen
+                    composable(
                         route = Screen.Detail.route,
-                        enterTransition = {
-                            slideIntoContainer(
-                                towards = AnimatedContentTransitionScope.SlideDirection.Left,
-                                animationSpec = tween(300)
-                            )
-                        },
-                        exitTransition = {
-                            slideOutOfContainer(
-                                towards = AnimatedContentTransitionScope.SlideDirection.Right,
-                                animationSpec = tween(300)
-                            )
-                        }
+                        arguments = listOf(navArgument("cardId") { type = NavType.StringType }),
+                        enterTransition = { fadeIn(animationSpec = enterTransitionSpec) },
+                        exitTransition = { fadeOut(animationSpec = exitTransitionSpec) }
                     ) { backStackEntry ->
-                        val cardId = backStackEntry.arguments?.getString("cardId") ?: "1"
+                        val cardId = backStackEntry.arguments?.getString("cardId") ?: "default"
                         DetailScreen(navController, cardId)
                     }
                     
+                    // Profile screen
                     composable(
                         route = Screen.Profile.route,
-                        enterTransition = {
-                            slideIntoContainer(
-                                towards = AnimatedContentTransitionScope.SlideDirection.Up,
-                                animationSpec = tween(300)
-                            )
-                        },
-                        exitTransition = {
-                            slideOutOfContainer(
-                                towards = AnimatedContentTransitionScope.SlideDirection.Down,
-                                animationSpec = tween(300)
-                            )
-                        }
+                        enterTransition = { fadeIn(animationSpec = enterTransitionSpec) },
+                        exitTransition = { fadeOut(animationSpec = exitTransitionSpec) }
                     ) {
                         ProfileScreen(navController)
                     }
                     
+                    // Settings screen
                     composable(
                         route = Screen.Settings.route,
-                        enterTransition = {
-                            slideIntoContainer(
-                                towards = AnimatedContentTransitionScope.SlideDirection.Left,
-                                animationSpec = tween(300)
-                            )
-                        },
-                        exitTransition = {
-                            slideOutOfContainer(
-                                towards = AnimatedContentTransitionScope.SlideDirection.Right,
-                                animationSpec = tween(300)
-                            )
-                        }
+                        enterTransition = { fadeIn(animationSpec = enterTransitionSpec) },
+                        exitTransition = { fadeOut(animationSpec = exitTransitionSpec) }
                     ) {
                         SettingsScreen(navController)
                     }
